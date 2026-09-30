@@ -1,0 +1,29 @@
+# Dependances
+node_modules/
+
+# Artefacts de compilation Rust / Tauri  (des Go si on ne les exclut pas)
+src-tauri/target/
+src-tauri/gen/
+target/
+dist/
+build/
+out/
+
+# Environnement : jamais de cles reelles dans le depot
+.env
+.env.*
+!.env.example
+
+# Bases de donnees locales : elles contiennent les donnees du poste
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Journal et divers
+*.log
+Thumbs.db
+.DS_Store
+.vscode/

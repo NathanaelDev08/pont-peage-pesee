@@ -1,0 +1,24 @@
+[package]
+name = "pont-peage-pesee"
+version = "0.1.0"
+description = "Système de pesée pont-bascule à péage — poste Tauri offline"
+authors = ["TIPHARA"]
+edition = "2021"
+
+[lib]
+name = "pont_peage_pesee_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-sql = { version = "2", features = ["sqlite"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serialport = "4.6"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+regex = "1"
